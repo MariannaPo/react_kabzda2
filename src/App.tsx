@@ -7,14 +7,20 @@ import Rating from './components/Rating/Rating';
 function App() {
   return (
     <div>
-     <AppTitle/>
-     <Rating/>
-     <Accordion/>
-    </div>
+     <PageTitle title={"My components"}/>
+     Article 1
+     <Rating value={2}/>
+     <PageTitle title={'Dont touch'}/>
+     <Accordion title={'numbers'}/>
+     Article 2
+     <Rating value={3}/>
+     <Accordion title={'date'}/>
+  
+         </div>
   );
 }
 
-function AppTitle () {
-  return <>my components</>
+function PageTitle (props: any) {
+  return <h3>{props.title}</h3>
 }
 export default App;

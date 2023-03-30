@@ -1,17 +1,81 @@
 import React from "react";
+import { preProcessFile } from "typescript";
 
-function Rating () {
+function Rating (props: any) {
+
+  if(props.value === 1){
     return (
       <div>
-        <Star/>
-        <Star/>
-        <Star/>
+        <Star selected={true}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
       </div>
     )
   }
-  function Star () {
+  if(props.value === 2){
     return (
-      <div>star</div>
+      <div>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
+      </div>
     )
+  }
+  if(props.value === 3){
+    return (
+      <div>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
+      </div>
+    )
+  }
+  if(props.value === 4){
+    return (
+      <div>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={false}/>
+      </div>
+    )
+  }
+  if(props.value === 5){
+    return (
+      <div>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={true}/>
+        <Star selected={true}/>
+      </div>
+    )
+  } return (
+      <div>
+        <Star selected={false}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
+        <Star selected={false}/>
+      </div>
+    )
+}
+
+
+
+
+  function Star (props: any) {
+    if (props.selected === true) {
+      return  <div><b>star</b></div>
+    } else {
+      return <div>star</div>
+    }
   }
   export default Rating;
