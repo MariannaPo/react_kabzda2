@@ -5,11 +5,15 @@ import './App.css';
 function App() {
   return (
     <div>
-     my components
+     <AppTitle/>
      <Rating/>
      <Accordion/>
     </div>
   );
+}
+
+function AppTitle () {
+  return <>my components</>
 }
 
 function Star () {
@@ -31,13 +35,29 @@ function Rating () {
 function Accordion () {
   return(
     <div>
-      <h3>Menu</h3>
-      <ul>
+      <AccordionTitle/>
+      <AccordionBody/>
+    </div>
+  )
+}
+
+function AccordionTitle () {
+  return(
+    <>
+    <h3>Menu</h3>
+    </>
+  )
+}
+
+function AccordionBody () {
+  return (
+    <>
+    <ul>
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
-    </div>
+    </>
   )
 }
 
