@@ -1,6 +1,19 @@
+import { type } from "os"
 import React from "react"
 
-function Accordion (props:any) {
+type AccordionPropsType = {
+  title: string,
+  collapsed: boolean
+}
+
+function Accordion (props:AccordionPropsType) {
+  if (props.collapsed === true){
+  return(
+      <div>
+        <AccordionTitle title={props.title}/>
+      </div>
+    )
+  }else{
     return(
       <div>
         <AccordionTitle title={props.title}/>
@@ -8,7 +21,13 @@ function Accordion (props:any) {
       </div>
     )
   }
+    
+  }
   
+type AccordionTitlePropsType = {
+  title: string
+}
+
   function AccordionTitle (props: any) {
     return(
       <>
