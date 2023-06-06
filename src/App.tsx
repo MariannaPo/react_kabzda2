@@ -8,15 +8,14 @@ import { type } from 'os';
 function App() {
   return (
     <div>
-      {/* <PageTitle title={"My components"}/>
-      Article 1
-      <Rating value={2}/>
-      <PageTitle title={'Dont touch'}/> */}
-      <Accordion title={'numbers'} collapsed={true}/>
-       {/* Article 2
-      <Rating value={3}/> */}
+       <Accordion title={'numbers'} collapsed={true}/>
        <Accordion title={'date'} collapsed={false}/>
-  
+       <Rating value={0}/>
+       <Rating value={1}/>
+       <Rating value={2}/>
+       <Rating value={3}/>
+       <Rating value={4}/>
+       <Rating value={5}/>
      </div>
   );
 }
