@@ -5,19 +5,21 @@ import Accordion from './components/Accordion/Accordion';
 import Rating from './components/Rating/Rating';
 import { type } from 'os';
 import { OnOff } from './components/OnOff/OnOff';
+import UncontrolledAccordion from './components/Accordion/UncontrolledAccordion';
 
 function App() {
   return (
-    <div>
-       {/* <Accordion title={'numbers'} collapsed={true}/>
+    <div className='App'>
+       <Accordion title={'numbers'} collapsed={true}/>
        <Accordion title={'date'} collapsed={false}/>
-       <Rating value={0}/>
+       <UncontrolledAccordion title='songs'/>
+       {/* <Rating value={0}/>
        <Rating value={1}/>
        <Rating value={2}/>
        <Rating value={3}/>
        <Rating value={4}/>
        <Rating value={5}/> */}
-       <OnOff/>
+       {/* <OnOff/> */}
      </div>
   );
 }
