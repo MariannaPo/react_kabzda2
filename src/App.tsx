@@ -6,6 +6,7 @@ import Rating from './components/Rating/Rating';
 import { type } from 'os';
 import { OnOff } from './components/OnOff/OnOff';
 import UncontrolledAccordion from './components/Accordion/UncontrolledAccordion';
+import UncontrolledRating from './components/Rating/UncontrolledRating';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
        <Rating value={1}/>
        <Rating value={2}/>
        <Rating value={3}/> */}
-       <Rating value={4}/>
-       <Rating value={5}/>
+       {/* <Rating value={4}/>
+       <Rating value={5}/> */}
+       <UncontrolledRating/>
        {/* <OnOff/> */}
      </div>
   );
