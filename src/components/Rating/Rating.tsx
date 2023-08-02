@@ -2,7 +2,8 @@ import { type } from "os";
 import React from "react";
 import { preProcessFile } from "typescript";
 
-export type RatingValuesType = 0 | 1 | 2 | 3 | 4 | 5;
+export type RatingValuesType =  0 | 1 | 2 | 3 | 4 | 5;
+
 
 type RatingPropsType = {
   value: RatingValuesType,
