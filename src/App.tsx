@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Accordion from './components/Accordion/Accordion';
-import Rating from './components/Rating/Rating';
+import Rating, { RatingValuesType } from './components/Rating/Rating';
 import { type } from 'os';
 import { OnOff } from './components/OnOff/OnOff';
 import UncontrolledAccordion from './components/Accordion/UncontrolledAccordion';
 import UncontrolledRating from './components/Rating/UncontrolledRating';
 
 function App() {
+
+let [ratingValue, setRatingValue] = useState<RatingValuesType>(4);
+
   return (
     <div className='App'>
        {/* <Accordion title={'numbers'} collapsed={true}/>
@@ -20,8 +23,10 @@ function App() {
        <Rating value={3}/> */}
        {/* <Rating value={4}/>
        <Rating value={5}/> */}
-       <UncontrolledRating/>
+       {/* <UncontrolledRating/> */}
        {/* <OnOff/> */}
+       {/* <UncontrolledAccordion title={'Menu'} /> */}
+       <Rating value={ratingValue} onClick={setRatingValue}/>
      </div>
   );
 }
