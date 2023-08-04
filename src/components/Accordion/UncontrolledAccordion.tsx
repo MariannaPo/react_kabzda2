@@ -26,9 +26,13 @@ type UncontrolledAccordionPropsType = {
   
     function AccordionTitle (props: any) {
 
+      const clickedAccordion=()=>{
+        props.onClick()
+      }
+
       return(
         <>
-        <h3 onClick={()=>{props.onClick()}}>{props.title}</h3>
+        <h3 onClick={clickedAccordion}>{props.title}</h3>
         </>
       )
     }
