@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-type PropsType = {
+export type PropsType = {
     on: boolean,
     onChange: (on: boolean)=>void
 }
